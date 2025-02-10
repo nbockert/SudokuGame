@@ -45,7 +45,7 @@ fun SudokuGame() {
     val isGridValid = remember { mutableStateOf(false)}
     val snackbarHostState = remember { SnackbarHostState() }
     val coroutineScope = rememberCoroutineScope()
-
+    //source: ChatGPT
     fun gridValid(grid: List<List<Int?>>): Boolean{
         for (i in 0..8){
             val row = grid[i].filterNotNull()
@@ -130,6 +130,7 @@ fun SudokuGame() {
     }
 
         if (selectRow != -1 && selectCol != -1) {
+            //Source: ChatGPT
             val focusManager = LocalFocusManager.current
             TextField(
                 value = valueEntered,
